@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Discover properties for rent and sale in Lokoja, Kogi State, with PropConnect Lokoja.">
+
+    <title>PropConnect Lokoja | Find Your Next Property</title>
+
+    <link rel="stylesheet"href="style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="site-header">
+        <nav class="navbar container">
+            <a href="#" class="logo">
+                <span class="logo-mark">P</span>
+                <span>PropConnect<span class="logo-accent"> Lokoja</span></span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#properties">Properties</a>
+                <a href="#locations">Locations</a>
+                <a href="#about">About</a>
+                <a href="#contact" class="nav-cta">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero section -->
+        <section class="hero" id="home">
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-content">
+                <span class="eyebrow">YOUR PROPERTY SEARCH STARTS HERE</span>
+
+                <h1>Find a place to call <span>home.</span></h1>
+
+                <p>
+                    Explore properties for rent and sale across Lokoja,
+                    Kogi State, with a simpler way to discover your next home.
+                </p>
+
+                <!-- Property search -->
+                <form class="search-panel" id="searchForm">
+                    <div class="search-field">
+                        <label for="locationFilter">Neighbourhood</label>
+                        <select id="locationFilter">
+                            <option value="">All Lokoja areas</option>
+                            <option value="Felele">Felele</option>
+                            <option value="Ganaja">Ganaja</option>
+                            <option value="Adankolo">Adankolo</option>
+                            <option value="Lokongoma">Lokongoma</option>
+                            <option value="Phase 1">Phase 1</option>
+                            <option value="Crusher">Crusher</option>
+                        </select>
+                    </div>
+
+                    <div class="search-field">
+                        <label for="typeFilter">Property type</label>
+                        <select id="typeFilter">
+                            <option value="">All property types</option>
+                            <option value="Apartment">Apartment</option>
+                            <option value="Self-contained">Self-contained</option>
+                            <option value="Duplex">Duplex</option>
+                            <option value="Land">Land</option>
+                            <option value="Commercial">Commercial</option>
+                        </select>
+                    </div>
+
+                    <div class="search-field">
+                        <label for="purposeFilter">Looking to</label>
+                        <select id="purposeFilter">
+                            <option value="">Rent or buy</option>
+                            <option value="Rent">Rent</option>
+                            <option value="Sale">Buy</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary search-button">
+                        Search Properties
+                    </button>
+                </form>
+
+                <div class="hero-note">
+                    <span>✓</span> Focused exclusively on Lokoja, Kogi State
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust / introduction strip -->
+        <section class="intro-strip">
+            <div class="container intro-grid">
+                <div>
+                    <strong>Lokoja focused</strong>
+                    <span>One local property market</span>
+                </div>
+                <div>
+                    <strong>Easy discovery</strong>
+                    <span>Search by your needs</span>
+                </div>
+                <div>
+                    <strong>Direct enquiries</strong>
+                    <span>Ask about a listing</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Properties -->
+        <section class="section container" id="properties">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">EXPLORE LISTINGS</span>
+                    <h2>Properties to discover</h2>
+                    <p>Find a property that fits your needs in Lokoja.</p>
+                </div>
+
+                <button type="button" class="btn btn-outline" id="showAllBtn">
+                    View all properties
+                </button>
+            </div>
+
+            <p class="demo-notice">
+                <h3>Property details and prices are used for Sample Purpose. It's not real or exact figure.</h3>
+                Confirm availability, ownership and terms before making payments.
+            </p>
+
+            <div class="results-bar">
+                <p id="resultsCount" aria-live="polite">
+                    <section class="available-houses">
+                        <h5>Houses Available for Enquiry in Lokoja</h5>
+                    
+                    <ul>
+                        <li>
+                            <strong>Newly Built 4-Bedroom Duplex</strong>
+                            <p>Location: Zone 8, Lokoja</p>
+                            <p>Asking Price: ₦70,000,000</p>
+                        </li>
+                    
+                        <li>
+                            <strong>3-Bedroom Bungalow with Four Uncompleted Flats</strong>
+                            <p>Location: Oworo Estate, Felele, Lokoja</p>
+                            <p>Asking Price: ₦36,000,000</p>
+                        </li>
+                    
+                         <li>
+                            <strong>3-Bedroom House</strong>
+                            <p>Location: Lokongoma, near Nostalgia Hotel, Lokoja</p>
+                            <p>Asking Price: ₦80,000,000</p>
+                        </li>
+                    
+                        <li>
+                            <strong>4-Bedroom Bungalow</strong>
+                            <p>Location: Lokoja, Kogi State</p>
+                            <p>Asking Price: ₦30,000,000</p>
+                        </li>
+                    
+                        <li>
+                            <strong>5-Bedroom Luxury Duplex</strong>
+                            <p>Location: Lokoja, Kogi State</p>
+                            <p>Asking Price: ₦350,000,000</p>
+                        </li>
+                        </p>
+                <button type="button" class="text-button" id="favoritesToggle">
+                    ♡ Show saved properties (<span id="favoritesCount">0</span>)
+                </button>
+            </div>
+
+            <div class="property-grid" id="propertyGrid">
+                <!-- JavaScript inserts property cards here -->
+            </div>
+
+            <div class="empty-state" id="emptyState" hidden>
+                <h3>No properties found</h3>
+                <p>Try changing your filters or view all available demo listings.</p>
+                <button type="button" class="btn btn-primary" id="resetSearchBtn">
+                    Reset search
+                </button>
+            </div>
+        </section>
+
+        <!-- Neighbourhoods -->
+        <section class="section locations-section" id="locations">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">EXPLORE LOKOJA</span>
+                        <h2>Browse by neighbourhood</h2>
+                        <p>Start your search in an area that interests you.</p>
+                    </div>
+                </div>
+
+                <div class="location-grid">
+                    <button class="location-card" data-location="Felele">
+                        <span class="location-number">01</span>
+                        <span class="location-name">Felele</span>
+                        <span class="location-action">Explore properties ↗</span>
+                    </button>
+
+                    <button class="location-card" data-location="Ganaja">
+                        <span class="location-number">02</span>
+                        <span class="location-name">Ganaja</span>
+                        <span class="location-action">Explore properties ↗</span>
+                    </button>
+
+                    <button class="location-card" data-location="Adankolo">
+                        <span class="location-number">03</span>
+                        <span class="location-name">Adankolo</span>
+                        <span class="location-action">Explore properties ↗</span>
+                    </button>
+
+                    <button class="location-card" data-location="Lokongoma">
+                        <span class="location-number">04</span>
+                        <span class="location-name">Lokongoma</span>
+                        <span class="location-action">Explore properties ↗</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="section container about-section" id="about">
+            <div class="about-content">
+                <span class="eyebrow">ABOUT PROPCONNECT LOKOJA</span>
+                <h2>A simpler way to explore real estate in Lokoja.</h2>
+                <p>
+                    PropConnect Lokoja is a proposed local property listing
+                    platform designed to help people discover homes, land and
+                    commercial spaces within Lokoja, Kogi State.
+                </p>
+                <p>
+                    The platform aims to make property discovery more
+                    organised by bringing listing information and enquiries
+                    into one convenient place.
+                </p>
+            </div>
+
+            <div class="about-highlight">
+                <span class="highlight-icon">⌂</span>
+                <h3>Local knowledge. Better discovery.</h3>
+                <p>
+                    Search by neighbourhood, property type and whether you
+                    want to rent or buy.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact / enquiry -->
+        <section class="section contact-section" id="contact">
+            <div class="container contact-layout">
+                <div class="contact-copy">
+                    <span class="eyebrow">GET IN TOUCH</span>
+                    <h2>Have a property in mind?</h2>
+                    <p>
+                        Send an enquiry about a listing or tell us what kind
+                        of property you are looking for in Lokoja.
+                    </p>
+                    <p class="contact-note">
+                        This starter version displays a confirmation in your
+                        browser. It does not yet send enquiries to a server.
+                    </p>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <label for="contactName">Your name</label>
+                    <input type="text" id="contactName" name="name"
+                        placeholder="Enter your name" required>
+
+                    <label for="contactEmail">Email address</label>
+                    <input type="email" id="contactEmail" name="email"
+                        placeholder="you@example.com" required>
+
+                    <label for="contactMessage">Your enquiry</label>
+                    <textarea id="contactMessage" name="message" rows="4"
+                        placeholder="Tell us what you need..." required></textarea>
+
+                    <button type="submit" class="btn btn-primary">
+                        Submit Enquiry
+                    </button>
+                    <p id="contactFeedback" class="form-feedback" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <a href="#home" class="logo footer-logo">
+                <span class="logo-mark">P</span>
+                <span>PropConnect<span class="logo-accent"> Lokoja</span></span>
+            </a>
+
+            <p>Property discovery for Lokoja, Kogi State, Nigeria.</p>
+            <p class="copyright">
+                © <span id="currentYear"></span> PropConnect Lokoja.
+                            </p>
+        </div>
+    </footer>
+
+    <!-- Property details dialog -->
+    <dialog class="details-dialog" id="detailsDialog">
+        <button type="button" class="dialog-close" id="closeDialog"
+            aria-label="Close property details">×</button>
+        <div id="detailsContent"></div>
+    </dialog>
+
+</body>
+</html>
